@@ -7,6 +7,29 @@
   --m-3-sys-dark-surface-variant: #48454e;
   --m-3-sys-dark-surface-variant-on-hover: #2a292e;
 
+  /* revamped colors */
+
+  /* Use this color as the background for your 
+  dark-on-light designs, or the text color of an inverted design. */
+  --light-shade: #F5EBF2;
+  
+  /* Accent colors can be used to bring attention to design
+   elements by contrasting with the rest of the palette. */
+  --light-accent: #71C3D5;
+  
+  /* This color should be eye-catching but not harsh. It can
+   be liberally applied to your layout as its main identity. */
+  --main-color: #189AB4;
+  
+  /* Another accent color to consider. Not all colors have to
+   be used - sometimes a simple color scheme works best. */
+  --dark-accent: #7E7C6D;
+
+  /* Use as the text color for dark-on-light 
+  designs, or as the background for inverted designs */
+  --dark-shade: #2E3040;
+  --darker-shade: #1A1B21;
+
   --radius: 0.2rem;
 }
 *::after {
@@ -16,7 +39,7 @@
 }
 
 body {
-  background: var(--m-3-sys-dark-background);
+  background: var(--light-accent);
   font-family: Roboto;
   margin: 0;
   min-height: 100vh;
@@ -25,13 +48,13 @@ body {
 .header {
   display: flex;
   height: 2rem;
-  background: var(--m-3-sys-dark-surface);
+  background: var(--darker-shade);
   padding: 0.8rem;
 
   align-items: center;
   justify-content: center;
 
-  color: var(--m-3-sys-dark-on-surface);
+  color: var(--light-shade);
   font-size: 35px;
   font-family: Roboto;
   font-weight: 700;
@@ -50,7 +73,7 @@ body {
 
 .card-container {
   /* font-family: Roboto; */
-  color: var(--m-3-sys-dark-on-surface);
+  color: var(--dark-shade);
   margin: 1rem;
   padding: 1rem;
   display: flex;
@@ -64,6 +87,7 @@ body {
 }
 
 .card {
+  background-color: var(--light-shade);
   width: 300px;
   height: 600px;
   padding: 1rem;
@@ -105,16 +129,16 @@ body {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-  border: 2px solid var(--m-3-sys-dark-on-surface);
+  border: 2px solid var(--dark-accent);
   background: transparent;
-  color: var(--m-3-sys-dark-on-surface);
+  color: var(--dark-accent);
   border-radius: var(--radius);
   transition: background 200ms ease-in,
   color 200ms ease-in;
 
   &:hover {
-    background: var(--m-3-sys-dark-surface-variant-on-hover);
-    color: white;
+    background: var(--dark-accent);
+    color: var(--light-shade);
   }
 }
 
