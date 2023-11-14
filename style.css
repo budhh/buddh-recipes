@@ -1,207 +1,144 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+@import url('https://fonts.googleapis.com/css?family=Martian+Mono');
+
+body {
+	font-family: 'Martian Mono';
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Martian Mono';
+	font-weight: 700;
+}
+
+html {
+	font-size: 100%;
+} /* 16px */
+
+h1 {
+	font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+	font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+	font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+	font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+	font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+	font-size: 0.75rem; /* 12px */
+}
 
 :root {
-  --m-3-sys-dark-background: #1c1b1e;
-  --m-3-sys-dark-surface: #141316;
-  --m-3-sys-dark-on-surface: #c9c5ca;
-  --m-3-sys-dark-surface-variant: #48454e;
-  --m-3-sys-dark-surface-variant-on-hover: #2a292e;
-
-  /* revamped colors */
-
-  /* Use this color as the background for your 
-  dark-on-light designs, or the text color of an inverted design. */
-  --light-shade: #F5EBF2;
-  
-  /* Accent colors can be used to bring attention to design
-   elements by contrasting with the rest of the palette. */
-  --light-accent: #71C3D5;
-  
-  /* This color should be eye-catching but not harsh. It can
-   be liberally applied to your layout as its main identity. */
-  --main-color: #189AB4;
-  
-  /* Another accent color to consider. Not all colors have to
-   be used - sometimes a simple color scheme works best. */
-  --dark-accent: #7E7C6D;
-
-  /* Use as the text color for dark-on-light 
-  designs, or as the background for inverted designs */
-  --dark-shade: #2E3040;
-  --darker-shade: #1A1B21;
-
-  --radius: 0.2rem;
+	--text: #d9f7ef;
+	--background: #030c09;
+	/* --background: #010403; */
+	--primary: #57bfdb;
+	--secondary: #122148;
+	/* --secondary: #0a142e; */
+	--accent: #315fd3;
+	--radius: 0.2rem;
 }
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  background: var(--light-accent);
-  font-family: Roboto;
-  margin: 0;
-  min-height: 100vh;
+	background: var(--background);
+	margin: 0;
+	min-height: 100vh;
 }
 
 .header {
-  display: flex;
-  height: 2rem;
-  background: var(--darker-shade);
-  padding: 0.8rem;
-
-  align-items: center;
-  justify-content: center;
-
-  color: var(--light-shade);
-  font-size: 35px;
-  font-family: Roboto;
-  font-weight: 700;
+	display: flex;
+	height: 2rem;
+	background: var(--background);
+	padding: 2rem;
+	align-items: center;
+	justify-content: center;
+	color: var(--text);
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .body {
-  flex: 1;
-  display: flex;
-  /* align-items: center; */
+	flex: 1;
+	display: flex;
 }
 
 .card-container {
-  /* font-family: Roboto; */
-  color: var(--dark-shade);
-  margin: 1rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  justify-content: space-evenly;
-  /* grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem)); */
-  /* grid-gap: 2rem; */
-  /* justify-content: center; */
+	color: var(--text);
+	margin: 1rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .card {
-  background-color: var(--light-shade);
-  width: 300px;
-  height: 600px;
-  padding: 1rem;
-  margin: 1rem;
-  overflow: hidden;
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: transform 200ms ease-in;  
-  
-  &:hover {
-    transform: scale(1.02);
-  }
+	background-color: var(--secondary);
+	width: 20rem;
+	height: 25rem;
+	padding: 1rem;
+	margin: 1rem;
+	overflow: hidden;
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: transform 200ms ease-in;
 
-  /* M3/Elevation Dark/5 */
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3),
-    0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+	&:hover {
+		transform: scale(1.02);
+	}
 }
 
-.card-image{
-  height: 12rem;
-  width: 100%;
-  object-fit: cover;
+.card-image {
+	height: 12rem;
+	width: 100%;
+	object-fit: cover;
 }
 
-.card-title{
-  padding: 1rem;
+.card-title {
+	padding: 0;
+	margin: 0;
 }
 
-.card-description{
-    padding: 0 1rem;
+.card-description {
+	padding: 0 1rem;
 }
 
-.card-button{
-  padding: 1rem;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 1rem;
-  border: 2px solid var(--dark-accent);
-  background: transparent;
-  color: var(--dark-accent);
-  border-radius: var(--radius);
-  transition: background 200ms ease-in,
-  color 200ms ease-in;
+.card-button {
+	padding: 1rem;
+	margin: 1rem;
+	border: 0.2rem solid var(--accent);
+	background: transparent;
+	color: var(--text);
+	border-radius: var(--radius);
+	transition: background 200ms ease-in, color 200ms ease-in;
 
-  &:hover {
-    background: var(--dark-accent);
-    color: var(--light-shade);
-  }
-}
-
-.search-container {
-  display: flex;
-  overflow: hidden;
-  padding: 20px;
-  background: var(--m-3-sys-dark-surface);
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-}
-
-.search-bar {
-  display: flex;
-  padding: 8px 12px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 16px;
-  background: var(--m-3-sys-dark-surface);
-}
-
-.search-box {
-  display: flex;
-  width: 250px;
-  padding: 6px 14px;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-radius: 16px;
-  background: var(--m-3-sys-dark-surface-variant);
-  /* M3/Elevation Dark/1 */
-  /* box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
-    0px 1px 3px 1px rgba(0, 0, 0, 0.15); */
-}
-
-.search-icon {
-  src: "./public/images/search-icon.svg";
-  display: flex;
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-  align-items: center;
-  color: var(--m-3-sys-dark-on-surface);
-}
-
-.search-text {
-  color: var(--m-3-sys-dark-on-surface, #c9c5ca);
-  text-align: center;
-  font-size: 24px;
-  font-family: Roboto;
-}
-
-.search-button {
-  background-color: var(--m-3-sys-dark-surface-variant);
-  border-radius: 16px;
-  border: none;
-  color: var(--m-3-sys-dark-on-surface);
-  padding: 12px 16px;
-  font-size: 20 px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: var(--m-3-sys-dark-surface-variant-on-hover);
+	&:hover {
+		background: var(--accent);
+		color: var(--secondary);
+	}
 }
