@@ -70,7 +70,8 @@ body {
 
 .header {
 	display: flex;
-	height: 2rem;
+	flex-direction: column;
+	/* height: 2rem; */
 	background: var(--background);
 	padding: 2rem;
 	align-items: center;
