@@ -59,5 +59,10 @@ function viewRecipe(recipeId) {
 	console.log(`Viewing recipe with ID ${recipeId}`);
 }
 
+function addRecipe() {
+	const button = document.getElementById('id-recipe');
+	button.addEventListener('click', viewRecipe(1));
+}
+
 // Initial function call to display recipes
 displayRecipes();
